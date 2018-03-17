@@ -1,0 +1,62 @@
+{
+  "APIURL": "https://msfapiservice.trafficmanager.net/",
+  "IoTDeviceID": "opcuaC2DAgentSiemens",
+  "IoTDevicePW": "12345",
+  "OPCUAEndpointURL": "opc.tcp://192.168.2.152:41210/",
+  "OPCUAUserIdentity": {
+    "id": "iotcenter",
+    "password": "Passw0rd2017"
+  },
+  "OPCUAAutoAccept": true,
+  "OPCUAInitialCommand": [
+    {
+      "command": "init",
+      "actions": [
+        {
+          "NodeId": "ns=3;s=\"MC_POWER_Enable\"",
+          "Value": "1"
+        },
+        {
+          "NodeId": "ns=3;s=\"MC_MOVEVELOCITY_Velocity\"",
+          "Value": "200"
+        },
+        {
+          "NodeId": "ns=3;s=\"MC_MOVEVELOCITY_Execute\"",
+          "Value": "1"
+        }
+      ]
+    }    
+  ],
+  "C2DMessage": [
+    {
+      "command": "set speed",
+      "actions": [
+        {
+          "NodeId": "ns=3;s=\"MC_Halt_Execute\"",
+          "Value": "0"
+        },
+        {
+          "NodeId": "ns=3;s=\"MC_MOVEVELOCITY_Velocity\"",
+          "Value": "[RPM]"
+        },
+        {
+          "NodeId": "ns=3;s=\"MC_MOVEVELOCITY_Execute\"",
+          "Value": "0"
+        },
+        {
+          "NodeId": "ns=3;s=\"MC_MOVEVELOCITY_Execute\"",
+          "Value": "1"
+        }
+      ]
+    },
+    {
+      "command": "halt",
+      "actions": [
+        {
+          "NodeId": "ns=3;s=\"MC_Halt_Execute\"",
+          "Value": "1"
+        }
+      ]
+    }
+  ]
+}

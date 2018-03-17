@@ -1,0 +1,108 @@
+{
+  "APIURL": "https://msfapiservice.trafficmanager.net/",
+  "IoTDeviceID": "opcuaC2DAgentSchneider",
+  "IoTDevicePW": "12345",
+  "OPCUAEndpointURL": "opc.tcp://OPC-A:51210",
+  "OPCUAUserIdentity": {
+    "id": "",
+    "password": ""
+  },
+  "OPCUAAutoAccept": true,
+  "C2DMessage": [
+    {
+      "command": "red on",
+      "actions": [
+        {
+          "NodeId": "ns=2;s=MRTU_TowerValue.TowerSeg[3]",
+          "Value": "true"
+        },
+        {
+          "NodeId": "ns=2;s=MRTU_TowerValue.TowerSeg[0]",
+          "Value": "true"
+        }
+      ]
+    },
+    {
+      "command": "red flash",
+      "actions": [
+        {
+          "NodeId": "ns=2;s=MRTU_TowerValue.TowerSeg[3]",
+          "Value": "true"
+        },
+        {
+          "NodeId": "ns=2;s=MRTU_TowerValue.TowerSeg[0]",
+          "Value": "false"
+        }
+      ]
+    },
+    {
+      "command": "orange on",
+      "actions": [
+        {
+          "NodeId": "ns=2;s=MRTU_TowerValue.TowerSeg[4]",
+          "Value": "true"
+        },
+        {
+          "NodeId": "ns=2;s=MRTU_TowerValue.TowerSeg[1]",
+          "Value": "true"
+        }
+      ]
+    },
+    {
+      "command": "orange flash",
+      "actions": [
+        {
+          "NodeId": "ns=2;s=MRTU_TowerValue.TowerSeg[4]",
+          "Value": "true"
+        },
+        {
+          "NodeId": "ns=2;s=MRTU_TowerValue.TowerSeg[1]",
+          "Value": "false"
+        }
+      ]
+    },
+    {
+      "command": "green on",
+      "actions": [
+        {
+          "NodeId": "ns=2;s=MRTU_TowerValue.TowerSeg[5]",
+          "Value": "true"
+        },
+        {
+          "NodeId": "ns=2;s=MRTU_TowerValue.TowerSeg[2]",
+          "Value": "true"
+        }
+      ]
+    },
+    {
+      "command": "green flash",
+      "actions": [
+        {
+          "NodeId": "ns=2;s=MRTU_TowerValue.TowerSeg[5]",
+          "Value": "true"
+        },
+        {
+          "NodeId": "ns=2;s=MRTU_TowerValue.TowerSeg[2]",
+          "Value": "false"
+        }
+      ]
+    },
+    {
+      "command": "all off",
+      "actions": [
+        {
+          "NodeId": "ns=2;s=MRTU_TowerValue.TowerSeg[3]",
+          "Value": "false"
+        },
+        {
+          "NodeId": "ns=2;s=MRTU_TowerValue.TowerSeg[4]",
+          "Value": "false"
+        },
+        {
+          "NodeId": "ns=2;s=MRTU_TowerValue.TowerSeg[5]",
+          "Value": "false"
+        }
+      ]
+    }
+  ]
+}
